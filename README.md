@@ -68,3 +68,30 @@ Creator interface    --------->  Product
 
 Go has no inheritance. Go has the notion of interfaces and structs so we can use these to design a factory pattern.
 
+### Singleton
+
+Purpose:
+
+Restricts instantiation of a class to a single instance and provides global access
+
+Allows lazy initialization of the class. Not instantiated until it's needed.
+
+Scenarios:
+
+Situations where you want to ensure there is only one instance of a class: logging, configuration, telemetry, debugging
+
+```txt
+
++---------------------------+
+|     Singleton             |
+| instance: Singleton       |
+| - Singleton()             |
+|                           |
+|+ getInstance(): Singleton |-----------> return instance
++---------------------------+
+```
+
+In Go:
+
+1. Implement Singleton using structs
+2. Make sure to Singleton is safe to access from within go routines

@@ -110,3 +110,28 @@ Working with:
 Scenarios:
 
 Enables incompatible objects to work together without having to make changes to either one
+
+### Facade Pattern
+
+Purpose: Provide a simple, front-facing interface to a more complex system, library, or API
+
+Scenarios:
+
+- Improve usability of a more complex API.
+- Serve as a starting point for refactoring.
+- Reduce tight coupling between parts of a system for easier swapping out of components of functionalities as requirements change.
+
+```txt
+               +-- Facade -----+                Subsystem
+[ Client 1]    |simpleAPI1() { |         [Class A]
+               | funcA1()      |         funcA1()
+               | funcB2()      |         funcA2()       [Class B]
+               |}              |                        funcB1()
+[ Client 2 ]   |simpleAPI2() { |                        funcB2()
+               | funcC1()      |         [Class C]
+               | funcC2()      |         funcC1()
+               |}              |         funcC2()
+               +---------------+
+```
+
+Subsystem might be very complex. Do not want to expose all the complexity to the rest of the application.

@@ -95,3 +95,18 @@ In Go:
 
 1. Implement Singleton using structs
 2. Make sure to Singleton is safe to access from within go routines
+
+## Structural Patterns
+
+### Adapter Pattern
+
+Allows the interface of an existing subsystem or API to be used as another interface without modifying the code of the existing API.
+
+Working with:
+
+1. Legacy systems
+2. API or subsystems that you don't have ownership of and can't make any changes too
+
+Scenarios:
+
+Enables incompatible objects to work together without having to make changes to either one
